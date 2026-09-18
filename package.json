@@ -1,0 +1,38 @@
+{
+  "name": "ai-audit",
+  "version": "0.1.0",
+  "description": "AI project audit: security, license compliance, privacy, and cost checks for LLM applications. GitHub Action + CLI.",
+  "main": "src/index.js",
+  "bin": {
+    "ai-audit": "src/cli.js"
+  },
+  "files": [
+    "src/"
+  ],
+  "scripts": {
+    "test": "node --test test/",
+    "scan": "node src/cli.js ."
+  },
+  "keywords": [
+    "ai",
+    "audit",
+    "security",
+    "llm",
+    "compliance",
+    "license",
+    "privacy",
+    "cost",
+    "owasp",
+    "prompt-injection",
+    "github-action"
+  ],
+  "author": "Timur Rakhmatullin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TimurRakhmatullin86/ai-audit"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

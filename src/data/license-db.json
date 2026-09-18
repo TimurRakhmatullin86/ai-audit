@@ -1,0 +1,355 @@
+{
+  "llama-4": {
+    "provider": "Meta",
+    "license": "Llama 4 Community License",
+    "spdx": null,
+    "commercial": true,
+    "restrictions": [
+      "Organizations with >700M monthly active users need separate Meta license",
+      "Cannot use outputs to improve or train non-Llama models",
+      "Must include attribution notice in copies/derivatives",
+      "Meta can terminate license for IP claims against Llama"
+    ],
+    "risk": "high",
+    "url": "https://llama.meta.com/llama4/license/"
+  },
+  "llama-3": {
+    "provider": "Meta",
+    "license": "Llama 3 Community License",
+    "spdx": null,
+    "commercial": true,
+    "restrictions": [
+      "Organizations with >700M monthly active users need separate Meta license",
+      "Cannot use outputs to improve or train non-Llama models",
+      "Must include attribution notice in copies/derivatives",
+      "Meta can terminate license for IP claims against Llama"
+    ],
+    "risk": "high",
+    "url": "https://llama.meta.com/llama3/license/"
+  },
+  "meta-llama/": {
+    "provider": "Meta",
+    "license": "Llama Community License",
+    "spdx": null,
+    "commercial": true,
+    "restrictions": [
+      "Organizations with >700M monthly active users need separate Meta license",
+      "Cannot use outputs to improve or train non-Llama models",
+      "Must include attribution notice in copies/derivatives"
+    ],
+    "risk": "high",
+    "url": "https://llama.meta.com/llama3/license/"
+  },
+  "gemma-": {
+    "provider": "Google",
+    "license": "Gemma Terms of Use",
+    "spdx": "Apache-2.0",
+    "commercial": true,
+    "restrictions": [
+      "Subject to Google Prohibited Use Policy despite Apache 2.0 code license",
+      "Cannot use to develop other foundation models (except fine-tuning Gemma)",
+      "Google may update Prohibited Use Policy unilaterally",
+      "Must include model card and license with redistributions"
+    ],
+    "risk": "medium",
+    "url": "https://ai.google.dev/gemma/terms"
+  },
+  "google/gemma-": {
+    "provider": "Google",
+    "license": "Gemma Terms of Use",
+    "spdx": "Apache-2.0",
+    "commercial": true,
+    "restrictions": [
+      "Subject to Google Prohibited Use Policy despite Apache 2.0 code license",
+      "Cannot use to develop other foundation models (except fine-tuning Gemma)",
+      "Google may update Prohibited Use Policy unilaterally",
+      "Must include model card and license with redistributions"
+    ],
+    "risk": "medium",
+    "url": "https://ai.google.dev/gemma/terms"
+  },
+  "gemini-": {
+    "provider": "Google",
+    "license": "Google API Terms of Service",
+    "spdx": null,
+    "commercial": true,
+    "restrictions": [
+      "Subject to Google Generative AI Prohibited Use Policy",
+      "Must comply with applicable Google API Terms of Service"
+    ],
+    "risk": "low",
+    "url": "https://ai.google.dev/gemini-api/terms"
+  },
+  "mistral-7b": {
+    "provider": "Mistral AI",
+    "license": "Apache 2.0",
+    "spdx": "Apache-2.0",
+    "commercial": true,
+    "restrictions": [],
+    "risk": "low",
+    "url": "https://mistral.ai/licenses/apache-2-0"
+  },
+  "mistral-small": {
+    "provider": "Mistral AI",
+    "license": "Mistral AI Research License",
+    "spdx": null,
+    "commercial": false,
+    "restrictions": [
+      "Research and non-commercial use only",
+      "Cannot use for commercial purposes without separate agreement"
+    ],
+    "risk": "high",
+    "url": "https://mistral.ai/licenses/MRL-0.1.md"
+  },
+  "mistral-large": {
+    "provider": "Mistral AI",
+    "license": "Mistral AI Research License",
+    "spdx": null,
+    "commercial": false,
+    "restrictions": [
+      "Research and non-commercial use only",
+      "Cannot use for commercial purposes without separate agreement"
+    ],
+    "risk": "high",
+    "url": "https://mistral.ai/licenses/MRL-0.1.md"
+  },
+  "mistral-medium": {
+    "provider": "Mistral AI",
+    "license": "Mistral AI Research License",
+    "spdx": null,
+    "commercial": false,
+    "restrictions": [
+      "Research and non-commercial use only",
+      "Cannot use for commercial purposes without separate agreement"
+    ],
+    "risk": "high",
+    "url": "https://mistral.ai/licenses/MRL-0.1.md"
+  },
+  "mixtral-": {
+    "provider": "Mistral AI",
+    "license": "Apache 2.0",
+    "spdx": "Apache-2.0",
+    "commercial": true,
+    "restrictions": [],
+    "risk": "low",
+    "url": "https://mistral.ai/licenses/apache-2-0"
+  },
+  "mistral/": {
+    "provider": "Mistral AI",
+    "license": "Varies by model",
+    "spdx": null,
+    "commercial": true,
+    "restrictions": [
+      "License varies: Mistral 7B and Mixtral are Apache 2.0, larger models use Mistral Research License (non-commercial)"
+    ],
+    "risk": "medium",
+    "url": "https://mistral.ai/technology/"
+  },
+  "claude-": {
+    "provider": "Anthropic",
+    "license": "Anthropic API Terms of Service",
+    "spdx": null,
+    "commercial": true,
+    "restrictions": [
+      "Must comply with Anthropic Acceptable Use Policy",
+      "Cannot use to develop competing foundation models"
+    ],
+    "risk": "low",
+    "url": "https://www.anthropic.com/policies/terms-of-service"
+  },
+  "anthropic/": {
+    "provider": "Anthropic",
+    "license": "Anthropic API Terms of Service",
+    "spdx": null,
+    "commercial": true,
+    "restrictions": [
+      "Must comply with Anthropic Acceptable Use Policy",
+      "Cannot use to develop competing foundation models"
+    ],
+    "risk": "low",
+    "url": "https://www.anthropic.com/policies/terms-of-service"
+  },
+  "gpt-": {
+    "provider": "OpenAI",
+    "license": "OpenAI API Terms of Use",
+    "spdx": null,
+    "commercial": true,
+    "restrictions": [
+      "Must comply with OpenAI Usage Policies",
+      "Cannot use outputs to train competing models",
+      "Must disclose AI-generated content in certain contexts per Usage Policies"
+    ],
+    "risk": "low",
+    "url": "https://openai.com/policies/terms-of-use"
+  },
+  "o1-": {
+    "provider": "OpenAI",
+    "license": "OpenAI API Terms of Use",
+    "spdx": null,
+    "commercial": true,
+    "restrictions": [
+      "Must comply with OpenAI Usage Policies",
+      "Cannot use outputs to train competing models"
+    ],
+    "risk": "low",
+    "url": "https://openai.com/policies/terms-of-use"
+  },
+  "o3-": {
+    "provider": "OpenAI",
+    "license": "OpenAI API Terms of Use",
+    "spdx": null,
+    "commercial": true,
+    "restrictions": [
+      "Must comply with OpenAI Usage Policies",
+      "Cannot use outputs to train competing models"
+    ],
+    "risk": "low",
+    "url": "https://openai.com/policies/terms-of-use"
+  },
+  "chatgpt-": {
+    "provider": "OpenAI",
+    "license": "OpenAI API Terms of Use",
+    "spdx": null,
+    "commercial": true,
+    "restrictions": [
+      "Must comply with OpenAI Usage Policies",
+      "Cannot use outputs to train competing models"
+    ],
+    "risk": "low",
+    "url": "https://openai.com/policies/terms-of-use"
+  },
+  "deepseek-": {
+    "provider": "DeepSeek",
+    "license": "MIT License",
+    "spdx": "MIT",
+    "commercial": true,
+    "restrictions": [],
+    "risk": "low",
+    "url": "https://github.com/deepseek-ai/DeepSeek-V2/blob/main/LICENSE"
+  },
+  "phi-": {
+    "provider": "Microsoft",
+    "license": "MIT License",
+    "spdx": "MIT",
+    "commercial": true,
+    "restrictions": [],
+    "risk": "low",
+    "url": "https://huggingface.co/microsoft/phi-2/blob/main/LICENSE"
+  },
+  "qwen-": {
+    "provider": "Alibaba Cloud",
+    "license": "Varies (mostly Apache 2.0)",
+    "spdx": "Apache-2.0",
+    "commercial": true,
+    "restrictions": [
+      "Some larger models (Qwen-72B) have custom Tongyi Qianwen License with 100M MAU limit",
+      "Must include license and attribution with redistributions"
+    ],
+    "risk": "medium",
+    "url": "https://huggingface.co/Qwen"
+  },
+  "qwen/": {
+    "provider": "Alibaba Cloud",
+    "license": "Varies (mostly Apache 2.0)",
+    "spdx": "Apache-2.0",
+    "commercial": true,
+    "restrictions": [
+      "Some larger models have custom Tongyi Qianwen License with 100M MAU limit",
+      "Must include license and attribution with redistributions"
+    ],
+    "risk": "medium",
+    "url": "https://huggingface.co/Qwen"
+  },
+  "qwen2-": {
+    "provider": "Alibaba Cloud",
+    "license": "Apache 2.0",
+    "spdx": "Apache-2.0",
+    "commercial": true,
+    "restrictions": [],
+    "risk": "low",
+    "url": "https://huggingface.co/Qwen"
+  },
+  "command-r": {
+    "provider": "Cohere",
+    "license": "CC-BY-NC 4.0 / C4AI Community License",
+    "spdx": null,
+    "commercial": true,
+    "restrictions": [
+      "C4AI Community License: commercial use allowed but attribution required",
+      "Must display 'Built with Cohere' attribution in user-facing applications",
+      "Cannot remove or obscure Cohere branding requirements"
+    ],
+    "risk": "medium",
+    "url": "https://cohere.com/c4ai-cc-by-nc-license"
+  },
+  "command-": {
+    "provider": "Cohere",
+    "license": "Cohere API Terms of Use",
+    "spdx": null,
+    "commercial": true,
+    "restrictions": [
+      "Must comply with Cohere Usage Guidelines",
+      "Attribution required for C4AI Community License models"
+    ],
+    "risk": "medium",
+    "url": "https://cohere.com/terms-of-use"
+  },
+  "stable-diffusion-": {
+    "provider": "Stability AI",
+    "license": "CreativeML Open RAIL-M",
+    "spdx": null,
+    "commercial": true,
+    "restrictions": [
+      "Cannot use to deliberately produce harmful, deceptive, or discriminatory content",
+      "Must include copy of license with redistributions",
+      "Use restrictions propagate to derivatives"
+    ],
+    "risk": "medium",
+    "url": "https://huggingface.co/stabilityai/stable-diffusion-2/blob/main/LICENSE-MODEL"
+  },
+  "sdxl-": {
+    "provider": "Stability AI",
+    "license": "Stability AI Community License",
+    "spdx": null,
+    "commercial": true,
+    "restrictions": [
+      "Free for revenue under $1M annual; over $1M requires enterprise license",
+      "Cannot use to train competing image generation models",
+      "Use restrictions propagate to derivatives"
+    ],
+    "risk": "medium",
+    "url": "https://stability.ai/community-license-agreement"
+  },
+  "stable-": {
+    "provider": "Stability AI",
+    "license": "Stability AI Community License",
+    "spdx": null,
+    "commercial": true,
+    "restrictions": [
+      "Free for revenue under $1M annual; over $1M requires enterprise license",
+      "Cannot use to train competing image generation models"
+    ],
+    "risk": "medium",
+    "url": "https://stability.ai/community-license-agreement"
+  },
+  "yi-": {
+    "provider": "01.AI",
+    "license": "Apache 2.0",
+    "spdx": "Apache-2.0",
+    "commercial": true,
+    "restrictions": [],
+    "risk": "low",
+    "url": "https://huggingface.co/01-ai"
+  },
+  "grok-": {
+    "provider": "xAI",
+    "license": "xAI API Terms of Service",
+    "spdx": null,
+    "commercial": true,
+    "restrictions": [
+      "Must comply with xAI Acceptable Use Policy"
+    ],
+    "risk": "low",
+    "url": "https://x.ai/legal/terms-of-service"
+  }
+}

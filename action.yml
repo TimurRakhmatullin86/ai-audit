@@ -1,0 +1,87 @@
+name: "AI Audit"
+description: "Audit AI projects for security, license compliance, privacy & cost issues. Posts grade + badge in PR comments."
+author: "Timur Rakhmatullin"
+branding:
+  icon: "shield"
+  color: "blue"
+
+inputs:
+  path:
+    description: "Directory to scan (default: repository root)"
+    required: false
+    default: "."
+  fail-below:
+    description: "Fail the check if grade is below this score (0-100, default: 0 = never fail)"
+    required: false
+    default: "0"
+
+outputs:
+  score:
+    description: "Audit score (0-100)"
+  grade:
+    description: "Letter grade (A+ through F)"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: "20"
+
+    - name: Run AI Audit
+      id: audit
+      shell: bash
+      run: |
+        cd ${{ github.action_path }}
+        RESULT=$(node src/cli.js "${{ inputs.path }}" --json)
+        SCORE=$(echo "$RESULT" | node -e "const d=JSON.parse(require('fs').readFileSync('/dev/stdin','utf8')); process.stdout.write(String(d.score))")
+        GRADE=$(echo "$RESULT" | node -e "const d=JSON.parse(require('fs').readFileSync('/dev/stdin','utf8')); process.stdout.write(d.grade)")
+        echo "score=$SCORE" >> "$GITHUB_OUTPUT"
+        echo "grade=$GRADE" >> "$GITHUB_OUTPUT"
+
+        MARKDOWN=$(node src/cli.js "${{ inputs.path }}" --markdown)
+        {
+          echo "comment<<AUDIT_EOF"
+          echo "$MARKDOWN"
+          echo "AUDIT_EOF"
+        } >> "$GITHUB_OUTPUT"
+
+    - name: Comment on PR
+      if: github.event_name == 'pull_request'
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const body = `${{ steps.audit.outputs.comment }}`;
+          const { data: comments } = await github.rest.issues.listComments({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: context.issue.number,
+          });
+          const existing = comments.find(c => c.body?.includes('AI Project Audit'));
+          if (existing) {
+            await github.rest.issues.updateComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              comment_id: existing.id,
+              body,
+            });
+          } else {
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body,
+            });
+          }
+
+    - name: Check threshold
+      if: inputs.fail-below != '0'
+      shell: bash
+      run: |
+        SCORE=${{ steps.audit.outputs.score }}
+        THRESHOLD=${{ inputs.fail-below }}
+        if [ "$SCORE" -lt "$THRESHOLD" ]; then
+          echo "::error::AI Audit score $SCORE is below threshold $THRESHOLD"
+          exit 1
+        fi
