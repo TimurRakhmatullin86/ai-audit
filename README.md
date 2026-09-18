@@ -1,6 +1,6 @@
 # ai-audit
 
-[![npm](https://img.shields.io/npm/v/ai-audit)](https://www.npmjs.com/package/ai-audit)
+[![npm](https://img.shields.io/npm/v/ai-project-audit)](https://www.npmjs.com/package/ai-project-audit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 **Audit AI projects for security, license compliance, privacy & cost issues.**
@@ -19,7 +19,7 @@ One command scans your codebase and produces a grade (A+ through F) with actiona
 ### CLI
 
 ```bash
-npx ai-audit .
+npx ai-project-audit .
 ```
 
 ### GitHub Action
@@ -44,7 +44,7 @@ The action posts a comment on your PR with the full audit report and a badge.
 ## CLI Options
 
 ```
-ai-audit [dir] [options]
+ai-project-audit [dir] [options]
 
 Options:
   --format text|json|markdown   Output format (default: text)
